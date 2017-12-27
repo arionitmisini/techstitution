@@ -1,0 +1,26 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+.wrapper{
+    height: 50px;
+    background-color: #176bb3;
+    width:100%;
+	overflow:hidden
+}
+.container{
+    width: 960px;
+    margin: 0 auto;
+}
+h1.title{
+    transform: translateY(-30%); 
+    font-family: Myriad Pro Regular;
+    text-align: center;
+    font-size: 26px;
+}
+.nav-color{
+    background-color:#003663 !important; 
+}
+.nav-tabs{
+    border:none !important;
+}

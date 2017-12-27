@@ -1,0 +1,110 @@
+<% include partials/header %>
+		<div class="container">
+			<div class="row main">
+				<div class="main-login main-center">
+					<form method="POST" action="/qkmk/add">
+                        <div class="form-group">
+                        <label for="name" class="cols-sm-2 control-label">Zgjedhja pikes kufitare</label>
+                            <select name="pika_kufitare" id="pika_kufitare">
+                                <option value="Merdare">Merdare</option>
+								<option value="Dheu i bardhe">Dheu i bardhe</option>
+                                <option value="Vermice">Vermices</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+							<label for="name" class="cols-sm-2 control-label">Minimum</label>
+							<div class="cols-sm-10">
+								<div class="input-group">
+									<span class="input-group-addon"><i class="fa fa-user fa" aria-hidden="true"></i></span>
+									<input type="text" class="form-control" name="minimum_hyrje_minuta" id="minimum_hyrje_minuta"  placeholder="minuta"/>
+								</div>
+							</div>
+                        </div>
+
+						<div class="form-group">
+							<label for="name" class="cols-sm-2 control-label">Maximum</label>
+							<div class="cols-sm-10">
+								<div class="input-group">
+									<span class="input-group-addon"><i class="fa fa-user fa" aria-hidden="true"></i></span>
+									<input type="text" class="form-control" name="maximum_hyrje_minuta" id="maximum_hyrj_-minuta"  placeholder="minuta"/>
+								</div>
+							</div>
+                        </div>
+                        
+                        <div class="form-group">
+							<label for="name" class="cols-sm-2 control-label">Minimum</label>
+							<div class="cols-sm-10">
+								<div class="input-group">
+									<span class="input-group-addon"><i class="fa fa-user fa" aria-hidden="true"></i></span>
+									<input type="text" class="form-control" name="minimum_dalje_minuta" id="minimum_dalje_minuta"  placeholder="minuta"/>
+								</div>
+							</div>
+                        </div>
+                        
+                        <div class="form-group">
+							<label for="name" class="cols-sm-2 control-label">Maximum</label>
+							<div class="cols-sm-10">
+								<div class="input-group">
+									<span class="input-group-addon"><i class="fa fa-user fa" aria-hidden="true"></i></span>
+									<input type="text" class="form-control" name="maximum_dalje_minuta" id="maximum_dalje_minuta"  placeholder="minuta"/>
+								</div>
+							</div>
+                        </div>
+                        
+                        <div class="form-group">
+							<label for="name" class="cols-sm-2 control-label">Minimum</label>
+							<div class="cols-sm-10">
+								<div class="input-group">
+									<span class="input-group-addon"><i class="fa fa-user fa" aria-hidden="true"></i></span>
+									<input type="text" class="form-control" name="minimum_hyrje_metra" id="minimum_hyrje_metra"  placeholder="metra"/>
+								</div>
+							</div>
+                        </div>
+                        
+                        <div class="form-group">
+							<label for="name" class="cols-sm-2 control-label">Maximum</label>
+							<div class="cols-sm-10">
+								<div class="input-group">
+									<span class="input-group-addon"><i class="fa fa-user fa" aria-hidden="true"></i></span>
+									<input type="text" class="form-control" name="maximum_hyrje_metra" id="maximum_hyrje_metra"  placeholder="metra"/>
+								</div>
+							</div>
+                        </div>
+                        
+                        <div class="form-group">
+							<label for="name" class="cols-sm-2 control-label">Minimum</label>
+							<div class="cols-sm-10">
+								<div class="input-group">
+									<span class="input-group-addon"><i class="fa fa-user fa" aria-hidden="true"></i></span>
+									<input type="text" class="form-control" name="minimum_dalje_metra" id="minimum_dalje_metra"  placeholder="metra"/>
+								</div>
+							</div>
+                        </div>
+                        
+                        <div class="form-group">
+							<label for="name" class="cols-sm-2 control-label">Maximum</label>
+							<div class="cols-sm-10">
+								<div class="input-group">
+									<span class="input-group-addon"><i class="fa fa-user fa" aria-hidden="true"></i></span>
+									<input type="text" class="form-control" name="maximum_dalje_metra" id="maximum_dalje_metra"  placeholder="metra"/>
+								</div>
+							</div>
+						</div>
+						
+						<button type="submit" id="myBtns">Dergo</button>
+						<button><a href="/lista">Lista</a></button>
+						<input type="hidden" id="pika_kufitare_input" name="pika_kufitare_input"/>
+					</form>
+
+					<script>
+						myBtns.addEventListener("click",function(){
+								var e = document.getElementById("pika_kufitare");
+								var strUser = e.options[e.selectedIndex].text;
+								var a = document.getElementById("pika_kufitare_input");
+  								a.value =strUser;
+						});
+					</script>
+				</div>
+			</div>
+		</div>
+<% include partials/footer %>

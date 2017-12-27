@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <% include partials/header %>
+</head>
+<body>
+
+<div class="container">
+  <h2>QKMK</h2>
+  <div class="table-responsive">          
+  <table class="table" id="myTable">
+    <thead>
+      <tr>
+        <th>Pika kufitare</th>
+        <th>Minimum</th>
+        <th>Maximum</th>
+        <th>Minimum</th>
+        <th>Maximum</th>
+        <th>Minimum</th>
+        <th>Maximum</th>
+        <th>Minimum</th>
+        <th>Maximum</th>
+      </tr>
+    </thead>
+    <tbody>
+          <% for (var i = 0; i < docs.length;   i++) { %>
+            <tr>
+              <td><%= docs[i].PikaKufitare %></td>
+              <td><%= docs[i].MinimumHyrjeMinuta %> min</td>
+              <td><%= docs[i].MaximumHyrjeMinuta %> min</td>
+              <td><%= docs[i].MinimumDaljeMinuta %> min</td>
+              <td><%= docs[i].MaximumDaljeMinuta %> min</td>
+              <td><%= docs[i].MinimumHyrjeMetra %> metra</td>
+              <td><%= docs[i].MaximumHyrjeMetra %> metra</td>
+              <td><%= docs[i].MinimumDaljeMetra %> metra</td>
+              <td><%= docs[i].MaximumDaljeMetra %> metra</td>
+              <td><a href="qkmk/edit/<%=docs[i]._id%>">Edit  </a><a href="qkmk/delete/<%=docs[i]._id%>">Delete</a></td>
+            </tr>    
+           <% } %>
+    </tbody>
+  </table>
+  </div>
+</div>
+</script>
+<% include partials/footer %>

@@ -1,0 +1,118 @@
+<% include partials/header %>
+		<div class="container">
+			<div class="row main">
+				<div class="main-login main-center">
+					<form method="POST" action="/qkmk/update/<%=doc._id%>">
+                        <div class="form-group">
+                        <label for="name" class="cols-sm-2 control-label">Zgjedhja pikes kufitare</label>
+                            <select name="pika_kufitare" id="pika_kufitare">
+                                <option value="<%=doc.PikaKufitare %>"><%=doc.PikaKufitare %></option>
+                                <option value="Dheu i bardhe">Dheu i bardhe</option>
+                                <option value="Vermice">Vermices</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+							<label for="name" class="cols-sm-2 control-label">Minimum</label>
+							<div class="cols-sm-10">
+								<div class="input-group">
+									<span class="input-group-addon"><i class="fa fa-user fa" aria-hidden="true"></i></span>
+									<input type="text" class="form-control" name="minimum_hyrje_minuta" id="minimum_hyrje_minuta"  value="<%=doc.MinimumHyrjeMinuta %>"/>
+								</div>
+							</div>
+                        </div>
+
+						<div class="form-group">
+							<label for="name" class="cols-sm-2 control-label">Maximum</label>
+							<div class="cols-sm-10">
+								<div class="input-group">
+									<span class="input-group-addon"><i class="fa fa-user fa" aria-hidden="true"></i></span>
+									<input type="text" class="form-control" name="maximum_hyrje_minuta" id="maximum_hyrj_-minuta"  value="<%=doc.MaximumHyrjeMinuta %>"/>
+								</div>
+							</div>
+                        </div>
+                        
+                        <div class="form-group">
+							<label for="name" class="cols-sm-2 control-label">Minimum</label>
+							<div class="cols-sm-10">
+								<div class="input-group">
+									<span class="input-group-addon"><i class="fa fa-user fa" aria-hidden="true"></i></span>
+									<input type="text" class="form-control" name="minimum_dalje_minuta" id="minimum_dalje_minuta"  value="<%=doc.MinimumDaljeMinuta %>"/>
+								</div>
+							</div>
+                        </div>
+                        
+                        <div class="form-group">
+							<label for="name" class="cols-sm-2 control-label">Maximum</label>
+							<div class="cols-sm-10">
+								<div class="input-group">
+									<span class="input-group-addon"><i class="fa fa-user fa" aria-hidden="true"></i></span>
+									<input type="text" class="form-control" name="maximum_dalje_minuta" id="maximum_dalje_minuta"  value="<%=doc.MaximumDaljeMinuta %>"/>
+								</div>
+							</div>
+                        </div>
+                        
+                        <div class="form-group">
+							<label for="name" class="cols-sm-2 control-label">Minimum</label>
+							<div class="cols-sm-10">
+								<div class="input-group">
+									<span class="input-group-addon"><i class="fa fa-user fa" aria-hidden="true"></i></span>
+									<input type="text" class="form-control" name="minimum_hyrje_metra" id="minimum_hyrje_metra"  value="<%=doc.MinimumHyrjeMetra %>"/>
+								</div>
+							</div>
+                        </div>
+                        
+                        <div class="form-group">
+							<label for="name" class="cols-sm-2 control-label">Maximum</label>
+							<div class="cols-sm-10">
+								<div class="input-group">
+									<span class="input-group-addon"><i class="fa fa-user fa" aria-hidden="true"></i></span>
+									<input type="text" class="form-control" name="maximum_hyrje_metra" id="maximum_hyrje_metra"  value="<%=doc.MaximumHyrjeMetra %>"/>
+								</div>
+							</div>
+                        </div>
+                        
+                        <div class="form-group">
+							<label for="name" class="cols-sm-2 control-label">Minimum</label>
+							<div class="cols-sm-10">
+								<div class="input-group">
+									<span class="input-group-addon"><i class="fa fa-user fa" aria-hidden="true"></i></span>
+									<input type="text" class="form-control" name="minimum_dalje_metra" id="minimum_dalje_metra"  value="<%=doc.MinimumDaljeMetra %>"/>
+								</div>
+							</div>
+                        </div>
+                        
+                        <div class="form-group">
+							<label for="name" class="cols-sm-2 control-label">Maximum</label>
+							<div class="cols-sm-10">
+								<div class="input-group">
+									<span class="input-group-addon"><i class="fa fa-user fa" aria-hidden="true"></i></span>
+									<input type="text" class="form-control" name="maximum_dalje_metra" id="maximum_dalje_metra"  value="<%=doc.MaximumHyrjeMetra %>"/>
+								</div>
+							</div>
+						</div>
+						
+                        <button type="submit" id="myBtns">Ndrysho</button>
+                        <button type="submit" id="myBtns2">Fshije</button>
+						<input type="hidden" id="pika_kufitare_input" name="pika_kufitare_input"/>
+					</form>
+					
+					<script>
+						myBtns.addEventListener("click",function(){
+								var e = document.getElementById("pika_kufitare");
+								var strUser = e.options[e.selectedIndex].text;
+								var a = document.getElementById("pika_kufitare_input");
+  								a.value =strUser;
+						});
+                    </script>
+                    <script>
+                            myBtns2.addEventListener("click",function(){
+                                    var e = document.getElementById("pika_kufitare");
+                                    var strUser = e.options[e.selectedIndex].text;
+                                    var a = document.getElementById("pika_kufitare_input");
+                                      a.value =strUser;
+                            });
+                    </script>
+				</div>
+			</div>
+		</div>
+<% include partials/footer %>
